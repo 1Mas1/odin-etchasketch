@@ -10,7 +10,7 @@ function createGrid(gridSize) {
     for (var i = 0; i < total; i++) 
     {
         divArray[i] = document.createElement('div');
-        divArray[i].className = 'grid' + i;
+        divArray[i].className = 'grid';
         if (i % endRow === 0 ){
             divArray[i].style.cssText = 'border: 0; height 0; width: 100%;';
         } else {
@@ -22,3 +22,14 @@ function createGrid(gridSize) {
 }
 
 createGrid(16)
+
+const grids = document.getElementsByClassName('grid');
+
+
+for (const item of grids) {
+    item.addEventListener('mouseenter', function1,false); 
+}
+
+function function1 () {
+    console.log('hello')
+}
